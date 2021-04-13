@@ -1,0 +1,15 @@
+﻿Master Category -> literature
+Category -> poem
+Spesific Category -> Turkish poetry (Nullable)
+Product -> Nazım Hikmet
+ProductImage
+ApplicationUser -> Ceren
+Role -> guest, member, admin, Assistant admin, accountant
+Module -> authority(yetki), Rollerine göre yetkilendirildikleri yerler, Role'lerin module'leri olucak- kullanıcının senin rolün şu ona göre module'nün şu denecek
+Order
+OrderItem
+Brand
+Basket 
+Address
+Ticket (conversation)
+TicketResponse (message)

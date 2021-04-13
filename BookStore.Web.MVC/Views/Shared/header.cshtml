@@ -1,0 +1,65 @@
+﻿@model List<MasterCategory>
+
+<header>
+    <div class="header bg-info">
+        <div class="main-header ">
+            <div class="header-bottom header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-1  col-md-1 col-sm-3">
+                            <div class="logo">
+                                <a href="@Url.Action("Index","Home")"><img src="~/Content/assets/img/MainPageImages/SiteLogo.png" width="100" height="100" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="@Url.Action("Index","Home")">HomePage</a></li>
+                                        <li>
+                                            <a href="javascript:void(0)">All Books</a>
+                                            <ul class="submenu">
+                                                @foreach (var item in Model)
+                                                {
+                                                   <li><a href="@Url.Action("Index","Shop", new {mcId=item.Id})">@item.Name</a></li>
+                                                }
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Frequently Asked Questions</a></li>
+                                        <li><a href="#aboutus">About Us</a></li>
+                                        <li><a href="#contactus">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                            <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
+                                <li class=" d-none d-xl-block">
+                                    <div class="favorit-items">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="shopping-card">
+                                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                                    </div>
+                                </li>
+                                <li class="d-none d-xl-block">
+                                    <div class="form-box f-right ">
+                                        <input type="text" name="Search" placeholder="Search products">
+                                        <div class="search-icon">
+                                            <i class="fas fa-search special-tag"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        @*<div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
